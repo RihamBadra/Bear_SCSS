@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+$lt-br: #79543b;
+$wh: #fff;
+$lt-yl: #FCDC94;
+$lt-shade: #ffcc62;
+$rd: #eb6944;
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #47caff;
+  display: flex;
+  justify-content: center;
+  height: 25em;
+  margin: 0 auto;
+  position: relative;
+  width: 25em;
+}
+
+.container, .eyes:before, .eyes:after, .smile, .chin, .tongue, .neck, .shirt,
+.shirt:before, .shirt:after, .paws-arms:before, .paws-arms:after, .honeypot {
+  border-radius: 50%;
+}
+
+.ears:before, .ears:after, .brows:before, .brows:after, .lids:before, .lids:after,
+.eyes:before, .eyes:after, .nose, .nose:after, .cheeks:before, .cheeks:after,
+.smile, .tongue, .chin, .neck, .shirt, .shirt:before, .shirt:after, .paws, .paws:before, .paws:after,
+.paws-arms, .paws-arms:before, .paws-arms:after, .honeypot, .honeypot:after, .honeypot .bee, .bee:after {
+  position: absolute;
+}
+
+.head {
+  background-color: $lt-yl;
+  border-radius: 100%/100% 100% 50% 50%;
+  height: 15em;
+  position: relative;
+  width: 15em;
+  z-index: 2;
+}
+
+.ears {
+  &:before,
+  &:after {
+    background-color: $lt-shade;
+    border-radius: 50% 40%;
+    border-color: $lt-br;
+    box-shadow: inset 1em 2em 0em -1em #FCDC94, inset -1em 1em 0em 0em #FCDC94;
+    content: "";
+    height: 3em;
+    width: 3em;
+  }
+  &:before {
+    transform: rotate(-31deg);
+  }
+  &:after {
+    right: 0;
+  }
+}
+
+.brows {
+  &:before,
+  &:after {
+    content: "";
+    height: 3em;
+    top: 5em;
+    width: 2em;
+  }
+  &:before {
+    border-radius: 100%/50% 30% 30% 20%;
+    left: 2em;
+    transform: rotate(-20deg);
+  }
+  &:after {
+    border-radius: 100%/20% 50% 50% 20%;
+    right: 2em;
+    transform: rotate(20deg);
+  }
+}
+
+.brows:before,
+.brows:after,
+.nose {
+  border-top-color: $lt-br;
+  border-top-width: .3em;
+  border-top-style: solid;
+}
+
+.lids {
+  &:before,
+  &:after {
+    background-color: transparentize($lt-shade, .2);
+    border-radius: 50%/100% 100% 50% 50%;
+    box-shadow: 0 0 0.3em 1em transparentize($lt-shade, .2);
+    content: "";
+    height: 3em;
+    width: 3em;
+  }
+  &:before {
+    left: 3em;
+  }
+  &:after {
+    right: 3em;
+  }
+  &:before,
+  &:after {
+    top: 7em;
+  }
+}
+
+.eyes {
+  &:before,
+  &:after {
+    background-color: $wh;
+    border: .3em solid darken($lt-br, 60%);
+    content: "";
+    height: 1em;
+    top: 9em;
+    width: 1em;
+    z-index: 2;
+  }
+  &:before {
+    box-shadow: inset 3px -5px 2px 5px darken($lt-br, 25%);
+    transform: rotate(45deg);
+    left: 4.8em;
+  }
+  &:after {
+    box-shadow: inset 5px 3px 2px 5px darken($lt-br, 25%);
+    right: 4.8em;
+    transform: rotate(-45deg);
+  }
+}
+
+.nose {
+  border-radius: 50%/20%;
+  height: 3em;
+  bottom: 2em;
+  left: 6.5em;
+  width: 2em;
+  &:after {
+    background-color: $wh;
+    border-radius: 80% 50% 50% 50%/50% 100% 30% 50%;
+    box-shadow: inset 0 0 9px 6px darken($lt-br, 25%);
+    content: "";
+    height: 1em;
+    width: 2em;
+    top: .6em;
+  }
+}
+
+.cheeks {
+  &:before,
+  &:after {
+    border-top-color: transparentize(lighten($lt-yl, 10%), .2);
+    border-top-width: 0.5em;
+    border-top-style: solid;
+    border-radius: 49%;
+    bottom: 2em;
+    box-shadow: inset -2.5em 2.5em 4em -3em $lt-shade, inset -3em 4em 3em -4em rgba(255, 192, 203, 0.71);
+    content: "";
+    height: 2em;
+    width: 4em;
+  }
+  &:before {
+    left: 1.8em;
+  }
+  &:after {
+    right: 1.8em;
+  }
+}
+
+.smile {
+  border-bottom-color: $lt-br;
+  bottom: 1.5em;
+  height: 3em;
+  left: 6em;
+  width: 3em;
+}
+
+.smile,
+.chin {
+  border-bottom-width: 1.3em;
+  border-bottom-style: solid;
+}
+
+.tongue {
+  border-bottom-color: pink;
+  border-bottom-width: 0.5em;
+  border-bottom-style: solid;
+  height: 0em;
+  left: 0.5em;
+  top: 2.5em;
+  width: 2em;
+}
+
+.chin {
+  border-bottom-color: $lt-yl;
+  box-shadow: 0 1em 1em -0.9em $lt-br;
+  height: 3em;
+  bottom: -0.5em;
+  left: 5em;
+  width: 5em;
+}
+
+.neck {
+  background-color: $lt-yl;
+  bottom: 8.2em;
+  height: 7em;
+  left: 6.5em;
+  width: 12em;
+  z-index: 1;
+}
+
+.shirt {
+  background-color: $rd;
+  bottom: 0em;
+  left: 3em;
+  height: 12em;
+  width: 19em;
+  &:before,
+  &:after {
+    border-bottom-style: solid;
+    border-width: 2em;
+    bottom: 6.5em;
+    content: "";
+    height: 5em;
+    width: 10em;
+    z-index: 1;
+  }
+  &:before {
+    border-bottom-color: darken($rd, 7%);
+    transform: rotate(21deg);
+    left: 3.3em;
+  }
+  &:after {
+    border-bottom-color: darken($rd, 5%);
+    transform: rotate(-21deg);
+    right: 3.3em;
+  }
+}
+
+.paws {
+  bottom: 8em;
+  left: 12.5em;
+  &:before,
+  &:after {
+    background-color: $lt-yl;
+    content: "";
+    height: 5em;
+    width: 5em;
+    z-index: 4;
+  }
+  &:before {
+    border-right: .1em solid transparentize($lt-br, .5);
+    border-radius: 70% 50%;
+    left: 4em;
+    top: 1em;
+  }
+  &:after {
+    border-left: .1em solid transparentize($lt-br, .5);
+    border-radius: 50% 70%;
+    box-shadow: inset -1em -1em 0 .1em darken($lt-shade, 10%);
+    right: 3em;
+    top: .5em;
+  }
+  &-arms {
+    top: 1em;
+    &:before,
+    &:after {
+      background-color: $lt-yl;
+      content: "";
+      height: 3.5em;
+      width: 5em;
+    }
+    &:before {
+      left: 5em;
+    }
+    &:after {
+      right: 5em;
+      transform: rotate(40deg);
+    }
+  }
+}
+
+.honeypot {
+  background-color: darken($lt-shade, 10%);
+  bottom: 0;
+  box-shadow: inset 0.1em -0.1em 0.2em 0.5em sandybrown, inset 0em 1em 0 1em $lt-br, 0em 2em 0 .5em darken($lt-br, 1%), 0em 4em 0 1em $lt-br, 0em 6em 0 .5em darken($lt-br, 2%), 0em 8em 0 -0.4em $lt-br;
+  color: darken($wh, 30%);
+  font-family: 'Architects Daughter', cursive;
+  height: 5em;
+  left: 5.5em;
+  width: 14em;
+  z-index: 3;
+  &:after {
+    bottom: 1em;
+    content: "HUNNY";
+    font-size: 1.5em;
+    left: 3.3em;
+    top: 5.2em;
+  }
+  & .bee {
+    background: linear-gradient(to bottom right, darken($lt-br, 60%) 0px, $lt-shade 4px, darken($lt-br, 60%), $lt-shade 8px, darken($lt-br, 60%), $lt-shade 19px);
+    border-radius: 50% 90%;
+    height: 1em;
+    right: 4em;
+    width: 1em;
+    animation: fly 3s infinite ease-in-out;
+    &:after {
+      background-color: rgba(255, 255, 255, 0.48);
+      border-radius: 100% 50%;
+      bottom: .5em;
+      content: "";
+      height: .8em;
+      left: .6em;
+      width: 0.8em;
+    }
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateX(-1em, 3em);
+  }
+  50% {
+    transform: translate(-3em, 0.5em);
+  }
+  100% {
+    transform: translateX(-1em, 3em);
+  }
+}
+
+
+
